@@ -36,6 +36,59 @@ use Germania\VatIdNo\VatIdNoAwareTrait;
 // public function setVatIdNo( $vatin );
 ```
 
+## Filters
+
+### WithVatIdNoFilterIterator
+
+Filter for records that *do provide* a VATIN. These may be:
+
+- Arrays with `vatin` key, and non-empty value. 
+- Objects with `vatin` property, and non-empty value
+- Instances of `VatIdNoProviderInterface`  where *getVatIdNo* results *not empty*
+
+```php
+<?php
+use Germania\VatIdNo\Filters\WithVatIdNoFilterIterator;
+
+$records = new \ArrayIterator( ask_database() );
+
+// Allow custom field names in arrays or objects
+$records_with_vatin = new WithoutVatIdNoFilterIterator( $records );
+$records_with_vatin = new WithoutVatIdNoFilterIterator( $records, "ust_id" );
+
+foreach( $records_with_vatin as $item):
+ // Do things like validating
+endforeach;
+```
+
+
+
+### WithoutVatIdNoFilterIterator
+
+Filter for records that do *not* provide a VATIN. These may be:
+
+- Arrays lacking `vatin` key
+- Objects lacking `vatin` property
+- Instances of `VatIdNoProviderInterface`  where *getVatIdNo* results empty
+
+```php
+<?php
+use Germania\VatIdNo\Filters\WithoutVatIdNoFilterIterator;
+
+$records = new \ArrayIterator( ask_database() );
+
+// Allow custom field names in arrays or objects
+$records_lacking = new WithoutVatIdNoFilterIterator( $records );
+$records_lacking = new WithoutVatIdNoFilterIterator( $records, "ust_id" );
+
+foreach( $records_lacking as item):
+ //...
+endforeach;
+```
+
+
+
+
 
 ## Validation
 
