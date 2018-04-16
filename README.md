@@ -42,7 +42,7 @@ use Germania\VatIdNo\VatIdNoAwareTrait;
 
 Filter for records that *do provide* a VATIN. These may be:
 
-- Arrays with `vatin` key, and non-empty value. 
+- Arrays with `vatin` key, and non-empty value
 - Objects with `vatin` property, and non-empty value
 - Instances of `VatIdNoProviderInterface`  where *getVatIdNo* results *not empty*
 
@@ -67,8 +67,8 @@ endforeach;
 
 Filter for records that do *not* provide a VATIN. These may be:
 
-- Arrays lacking `vatin` key
-- Objects lacking `vatin` property
+- Arrays lacking `vatin` key, or empty `vatin` element
+- Objects lacking `vatin` property, or empty `vatin` property
 - Instances of `VatIdNoProviderInterface`  where *getVatIdNo* results empty
 
 ```php
