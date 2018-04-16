@@ -2,7 +2,7 @@
 	"name": "germania-kg/vatidno",
 	"description": "Interfaces and traits for VAT ID numbers.",
 
-	"keywords": [ "VAT", "VAT ID Number", "interfaces", "traits", "filters", "VAT ID No" ],
+	"keywords": [ "VATIN", "VATID", "interfaces", "traits", "filters", "VAT", "VAT ID No", "VAT ID Number" ],
 
 	"license": "proprietary",
 	"authors": [
