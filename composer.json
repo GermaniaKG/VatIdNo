@@ -1,0 +1,33 @@
+{
+	"name": "germania-kg/vatidno",
+	"description": "Interfaces and traits for VAT ID numbers.",
+
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Carsten Witt",
+			"email": "carstenwitt@germania-kg.de",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Germania\\VatIdNo\\": "src/"
+		}
+	},
+
+  "autoload-dev": {
+      "psr-4": { "tests\\": "tests/src" }
+  },
+
+	"require": {
+	},
+	"require-dev": {
+		"php-coveralls/php-coveralls": "^2.0",
+		"phpunit/phpunit": "^5.7|^6.0"
+	},
+
+	"suggest": {
+		"ddeboer/vatin": "Validate VAT identification numbers"
+	}
+}
