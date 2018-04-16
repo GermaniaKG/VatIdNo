@@ -2,6 +2,10 @@
 
 **Interfaces and traits for VAT ID numbers**
 
+[![Build Status](https://travis-ci.org/GermaniaKG/VatIdNo.svg?branch=master)](https://travis-ci.org/GermaniaKG/VatIdNo)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/build-status/master)
 
 
 ## Installation
