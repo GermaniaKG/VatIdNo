@@ -1,6 +1,6 @@
 # Germania KG · VAT ID Number
 
-**Interfaces and traits for VAT ID numbers**
+**Interfaces, traits, and filters for dealing with VAT ID numbers**
 
 [![Build Status](https://travis-ci.org/GermaniaKG/VatIdNo.svg?branch=master)](https://travis-ci.org/GermaniaKG/VatIdNo)
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
@@ -16,24 +16,82 @@ $ composer require germania-kg/vatidno
 
 
 
-## Interfaces and Traits
+## Interfaces
+
+### VatIdNoProviderInterface
+
+Provides a method **VatIdNo** to retrieve the VATIN as string.
+
+```php
+use Germania\VatIdNo\VatIdNoProviderInterface;
+
+/**	
+ * @return string
+ */
+public function getVatIdNo();
+```
+
+### VatIdNoAwareInterface
+
+Extends *VatIdNoProviderInterface* and provides a method **setVatIdNo**, allowing you to set the VATIN.
+
+```php
+use Germania\VatIdNo\VatIdNoProviderInterface;
+
+/**	
+ * @param  string $vatin
+ * @return self
+ */
+public function setVatIdNo( $vatin );
+public function getVatIdNo();
+```
+
+
+
+## Traits
+
+### VatIdNoProviderTrait
+
+Implements the **VatIdNoProviderInterface** and provides a public property **vatin:**
 
 ```php
 use Germania\VatIdNo\VatIdNoProviderInterface;
 use Germania\VatIdNo\VatIdNoProviderTrait;
 
-// public function getVatIdNo();
+class MyClass implements VatIdNoProviderInterface {
+
+	use VatIdNoProviderTrait;
+	
+	public function __construct( $vatin ) {
+		$this->vatin = $vatin;
+	}
+}
 ```
 
-These ***Aware*** interfaces and traits extend the above **Providers**:
+
+### VatIdNoAwareTrait
+
+Implements the **VatIdNoAwareInterface**. Utilizes the *VatIdNoProviderTrait*. 
 
 ```php
 use Germania\VatIdNo\VatIdNoAwareInterface;
 use Germania\VatIdNo\VatIdNoAwareTrait;
 
-// $vatin = "XY000000";
-// $vatin = Instance of VatIdNoProviderInterface
-// public function setVatIdNo( $vatin );
+class MyClass implements VatIdNoAwareInterface {
+	use VatIdNoAwareTrait;
+}
+
+// Simple example
+$object1 = new MyClass;
+$object1->setVatIdNo( "XY000000" );
+
+// Fluent interface
+echo $object1->setVatIdNo( "XY000000" )->vatin;
+
+// Setting using VatIdNoProviderInterface
+$object2 = new MyClass;
+$object2->setVatIdNo( $object1 );
+
 ```
 
 ## Filters
@@ -92,7 +150,7 @@ endforeach;
 
 ## Validation
 
-To validate the VAT ID numbers, use **David de Boer's [ddeboer/vatin](https://github.com/ddeboer/vatin)** package.
+To validate the VAT ID numbers, use a dedicated package like **David de Boer's [ddeboer/vatin](https://github.com/ddeboer/vatin)** package.
 
 
 ## Development
