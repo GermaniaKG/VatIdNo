@@ -19,4 +19,17 @@ trait VatIdNoAwareTrait
         $this->vatin = $vatin;
         return $this;
     }
+
+
+    /**
+     * @inheritdoc
+     */
+    public function setTaxNo( $taxno )
+    {
+        if ($taxno instanceOf VatIdNoProviderInterface)
+            $taxno = $taxno->getTaxNo();
+
+        $this->taxno = $taxno;
+        return $this;
+    }
 }
