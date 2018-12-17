@@ -9,7 +9,7 @@ interface VatIdNoAwareInterface extends VatIdNoProviderInterface
      * @param  string $vatin VAT ID number
      * @return self   Fluent interface
      */
-    public function setVatIdNo( $vatin );
+    public function setVatIdNo($vatin);
 
     /**
      * Sets the tax number.
@@ -17,5 +17,5 @@ interface VatIdNoAwareInterface extends VatIdNoProviderInterface
      * @param  string $taxno Tax number
      * @return self   Fluent interface
      */
-    public function setTaxNo( $taxno );
+    public function setTaxNo($taxno);
 }
