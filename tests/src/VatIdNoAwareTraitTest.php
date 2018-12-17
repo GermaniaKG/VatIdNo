@@ -13,11 +13,10 @@ class VatIdNoAwareTraitTest extends \PHPUnit\Framework\TestCase
         $vatin = "XY99999";
 
         // Make sure we are really changing the number here
-        $this->assertNotEquals( $vatin, $mock->getVatIdNo());
+        $this->assertNotEquals($vatin, $mock->getVatIdNo());
 
         $mock->setVatIdNo($vatin);
-        $this->assertEquals( $vatin, $mock->getVatIdNo());
-
+        $this->assertEquals($vatin, $mock->getVatIdNo());
     }
 
     public function testTaxNoGetterAndSetter()
@@ -27,11 +26,10 @@ class VatIdNoAwareTraitTest extends \PHPUnit\Framework\TestCase
         $taxno = "XY99999";
 
         // Make sure we are really changing the number here
-        $this->assertNotEquals( $taxno, $mock->getTaxNo());
+        $this->assertNotEquals($taxno, $mock->getTaxNo());
 
         $mock->setTaxNo($taxno);
-        $this->assertEquals( $taxno, $mock->getTaxNo());
-
+        $this->assertEquals($taxno, $mock->getTaxNo());
     }
 
 
@@ -41,13 +39,13 @@ class VatIdNoAwareTraitTest extends \PHPUnit\Framework\TestCase
 
         // Make sure we are really changing the number here
         $vatin = "XY99999";
-        $this->assertNotEquals( $vatin, $mock->getVatIdNo());
+        $this->assertNotEquals($vatin, $mock->getVatIdNo());
 
-        $provider = $this->prophesize( VatIdNoProviderInterface::class );
-        $provider->getVatIdNo()->willReturn( $vatin );
-        $mock->setVatIdNo( $provider->reveal() );
+        $provider = $this->prophesize(VatIdNoProviderInterface::class);
+        $provider->getVatIdNo()->willReturn($vatin);
+        $mock->setVatIdNo($provider->reveal());
 
-        $this->assertEquals( $vatin, $mock->getVatIdNo());
+        $this->assertEquals($vatin, $mock->getVatIdNo());
     }
 
 
@@ -57,12 +55,12 @@ class VatIdNoAwareTraitTest extends \PHPUnit\Framework\TestCase
 
         // Make sure we are really changing the number here
         $taxno = "XY99999";
-        $this->assertNotEquals( $taxno, $mock->getTaxNo());
+        $this->assertNotEquals($taxno, $mock->getTaxNo());
 
-        $provider = $this->prophesize( VatIdNoProviderInterface::class );
-        $provider->getTaxNo()->willReturn( $taxno );
-        $mock->setTaxNo( $provider->reveal() );
+        $provider = $this->prophesize(VatIdNoProviderInterface::class);
+        $provider->getTaxNo()->willReturn($taxno);
+        $mock->setTaxNo($provider->reveal());
 
-        $this->assertEquals( $taxno, $mock->getTaxNo());
+        $this->assertEquals($taxno, $mock->getTaxNo());
     }
 }
