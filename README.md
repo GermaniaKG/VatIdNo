@@ -168,5 +168,5 @@ Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leav
 Run [PhpUnit](https://phpunit.de/) like this:
 
 ```bash
-$ vendor/bin/phpunit
+$ composer test
 ```
