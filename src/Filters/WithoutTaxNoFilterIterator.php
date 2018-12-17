@@ -23,20 +23,16 @@ class WithoutTaxNoFilterIterator extends \FilterIterator
     {
         $current = $this->getInnerIterator()->current();
 
-        if ($current instanceOf VatIdNoProviderInterface):
-            return empty( $current->getTaxNo());
-
-        elseif (is_array($current)):
-            return !array_key_exists( $this->field, $current)
+        if ($current instanceof VatIdNoProviderInterface) {
+            return empty($current->getTaxNo());
+        } elseif (is_array($current)) {
+            return !array_key_exists($this->field, $current)
                or empty($current[ $this->field ]);
-
-        elseif (is_object($current)):
-            return !isset( $current->{$this->field} )
-                or empty( $current->{$this->field});
-
-        endif;
+        } elseif (is_object($current)) {
+            return !isset($current->{$this->field})
+                or empty($current->{$this->field});
+        }
 
         return true;
-
     }
 }

@@ -5,16 +5,16 @@ use Germania\VatIdNo\VatIdNoProviderInterface;
 
 trait VatIdNoAwareTrait
 {
-
     use VatIdNoProviderTrait;
 
     /**
      * @inheritdoc
      */
-    public function setVatIdNo( $vatin )
+    public function setVatIdNo($vatin)
     {
-        if ($vatin instanceOf VatIdNoProviderInterface)
+        if ($vatin instanceof VatIdNoProviderInterface) {
             $vatin = $vatin->getVatIdNo();
+        }
 
         $this->vatin = $vatin;
         return $this;
@@ -24,10 +24,11 @@ trait VatIdNoAwareTrait
     /**
      * @inheritdoc
      */
-    public function setTaxNo( $taxno )
+    public function setTaxNo($taxno)
     {
-        if ($taxno instanceOf VatIdNoProviderInterface)
+        if ($taxno instanceof VatIdNoProviderInterface) {
             $taxno = $taxno->getTaxNo();
+        }
 
         $this->taxno = $taxno;
         return $this;

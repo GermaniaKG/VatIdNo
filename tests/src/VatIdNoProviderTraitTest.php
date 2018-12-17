@@ -16,7 +16,7 @@ class VatIdNoProviderTraitTest extends \PHPUnit\Framework\TestCase
         $this->assertObjectHasAttribute('vatin', $mock);
         $mock->vatin = $vatin;
 
-        $this->assertEquals( $vatin, $mock->getVatIdNo());
+        $this->assertEquals($vatin, $mock->getVatIdNo());
     }
 
     public function testTaxNoGetterAndSetter()
@@ -29,6 +29,6 @@ class VatIdNoProviderTraitTest extends \PHPUnit\Framework\TestCase
         $this->assertObjectHasAttribute('taxno', $mock);
         $mock->taxno = $taxno;
 
-        $this->assertEquals( $taxno, $mock->getTaxNo());
+        $this->assertEquals($taxno, $mock->getTaxNo());
     }
 }
