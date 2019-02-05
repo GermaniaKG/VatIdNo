@@ -2,10 +2,12 @@
 
 **Interfaces, traits, and filters for dealing with VAT ID numbers**
 
-[![Build Status](https://travis-ci.org/GermaniaKG/VatIdNo.svg?branch=master)](https://travis-ci.org/GermaniaKG/VatIdNo)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/vatidno.svg)](https://packagist.org/packages/germania-kg/vatidno)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/VatIdNo.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/VatIdNo)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/build-status/master)
+
 
 
 ## Installation
@@ -152,21 +154,21 @@ endforeach;
 
 To validate the VAT ID numbers, use a dedicated package like **David de Boer's [ddeboer/vatin](https://github.com/ddeboer/vatin)** package.
 
-
 ## Development
 
 ```bash
-$ git clone https://github.com/GermaniaKG/VatIdNo
+$ git clone https://github.com/GermaniaKG/VatIdNo.git
 $ cd VatIdNo
 $ composer install
 ```
 
-
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
-Run [PhpUnit](https://phpunit.de/) like this:
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
 
 ```bash
 $ composer test
+# or
+$ vendor/bin/phpunit
 ```
+
