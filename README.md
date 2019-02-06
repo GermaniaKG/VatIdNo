@@ -2,6 +2,7 @@
 
 **Interfaces, traits, and filters for dealing with VAT ID numbers**
 
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/vatidno.svg?style=flat)](https://packagist.org/packages/germania-kg/vatidno)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/vatidno.svg)](https://packagist.org/packages/germania-kg/vatidno)
 [![Build Status](https://img.shields.io/travis/GermaniaKG/VatIdNo.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/VatIdNo)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
