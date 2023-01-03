@@ -54,3 +54,4 @@ tests/build
 build
 phpunit.xml
 .php_cs.cache
+phpstan.neon

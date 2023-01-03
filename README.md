@@ -4,11 +4,7 @@
 
 [![Packagist](https://img.shields.io/packagist/v/germania-kg/vatidno.svg?style=flat)](https://packagist.org/packages/germania-kg/vatidno)
 [![PHP version](https://img.shields.io/packagist/php-v/germania-kg/vatidno.svg)](https://packagist.org/packages/germania-kg/vatidno)
-[![Build Status](https://img.shields.io/travis/GermaniaKG/VatIdNo.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/VatIdNo)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/VatIdNo/build-status/master)
-
+[![Tests](https://github.com/GermaniaKG/VatIdNo/actions/workflows/tests.yml/badge.svg)](https://github.com/GermaniaKG/VatIdNo/actions/workflows/tests.yml)
 
 
 ## Installation
