@@ -5,19 +5,18 @@ use Germania\VatIdNo\VatIdNoProviderInterface;
 
 class WithTaxNoFilterIterator extends \FilterIterator
 {
+    /**
+     * @var string
+     */
     public $field = "taxno";
 
     public function __construct(\Traversable $iterator, $field = null)
     {
-        if ($iterator instanceof \Iterator) {
-            parent::__construct($iterator);
-        } else {
-            parent::__construct($iterator->getIterator());
-        }
-
+        parent::__construct(new \IteratorIterator($iterator));
         $this->field = $field ?: $this->field;
     }
 
+    #[\ReturnTypeWillChange]
     public function accept()
     {
         $current = $this->getInnerIterator()->current();
